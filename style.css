@@ -1,0 +1,428 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;900&display=swap');
+
+:root {
+    --blue: hsl(192, 37%, 48%);
+    --blueoverlay: hsla(192, 37%, 48%, 0.90);
+    --darkblue: hsl(240, 21%, 20%);
+    --grayish-blue: hsl(240, 10%, 57%);
+    --lightblue: hsl(192, 90%, 77%);
+	--bluehover: #71C0D4;
+	--purple: hsl(268, 34%, 53%);
+    --purplehover:hsl(268, 55%, 71%);
+    --pearl: hsl(0,0%,98%);
+    --linecolor: hsla(240, 10%, 57%, 0.25);
+
+    --black-weight: 900;
+    --bold-weight: 500;
+}
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body {
+    font-family: 'Red Hat Display', sans-serif;
+  	font-size: 18px;
+	line-height: 26px;
+	font-weight: var(--bold-weight);
+  	background: var(--pearl);
+	color: var(--darkblue);
+}
+img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+h1 {
+    font-size: 64px;
+    line-height: 64px;
+}
+h2 {
+    font-size: 40px;
+    line-height: 44px;
+}
+h3 {
+	color: var(--blue);
+	font-size: 16px;
+	line-height: 26px;
+	letter-spacing: 4px;
+}
+p {
+    color: var(--grayish-blue);
+	font-size: 18px;
+	line-height: 26px;
+	font-weight: var(--bold-weight);
+}
+.container {
+    padding: 0 20px;
+ 	max-width: 1150px;
+ 	margin: 0 auto;
+}
+.wrapper {
+	max-width: 1500px;
+	margin: 0 auto;
+}
+.btn-download,
+.btn-about,
+.btn-download-footer {
+	font-family: 'Red Hat Display', sans-serif;
+	display: inline-block;
+	font-size: 16px;
+	line-height: 26px;
+	color: var(--pearl);
+	font-weight: 900;
+	transition: all 0.3s ease-in-out;
+	padding: 16px 41px;
+	border-radius: 29px;
+	border: none;
+	outline: none;
+	cursor: pointer;
+}
+.btn-download {
+  background-color: var(--blue);
+  margin-right: 16px;
+}
+.btn-download:hover {
+  background: var(--lightblue);
+}
+.btn-download span {
+  color: var(--bluehover);
+}
+.btn-about {
+  background: var(--purple);
+  padding: 16px 30px;
+}
+.btn-about:hover {
+  background: var(--purplehover);
+  padding: 16px 30px;
+}
+
+footer .btn-download-footer {
+	background-color: var(--purple);
+	z-index: 2;
+}
+footer .btn-download-footer:hover {
+background-color: var(--purplehover);
+}
+footer .btn-download-footer span {
+  	color: var(--purplehover);
+	  transition: all 0.3s ease;
+}
+footer .btn-download-footer:hover span {
+  	color: var(--purple);
+}
+header {
+	text-align: center;
+	margin-top: 80px;
+	margin-bottom: 110px;
+	overflow: hidden;
+}
+.header__content {
+	padding-top: 40px;
+}
+.header__details h1 {
+	margin-bottom: 34px;
+}
+.header__details p {
+	margin-bottom: 32px;
+	padding: 0 50px;
+}
+.header__grid {
+	display: grid;
+	grid-template-columns: 1fr 1.5fr 1fr;
+	margin-top: 58px;
+}
+.main {
+	text-align: center;
+}
+.main__images {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 25px;
+	align-items: center;
+	justify-content: center;
+	margin-top: 64px;
+}
+.header__images-left,
+.header__images-right {
+	display: flex;
+	justify-content: space-around;
+}
+.header__images-left {
+	margin-left: -75px;
+}
+.header__images-right {
+	margin-right: -75px;
+}
+.header__images-left img,
+.header__images-right img {
+	max-width: 110px;
+	height: auto;
+	border-radius: 50%;
+}
+.header__images-left div,
+.header__images-right div {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	row-gap: 28px;
+}
+.header__images-left div:nth-child(2) {
+	align-self: flex-start;
+}
+.header__images-right div:nth-child(2) {
+	align-self: flex-end;
+}
+.main__images img {
+	border-radius: 10px;
+	flex: 1 1 150px;
+	max-width: 255px;
+	min-width: 150px;
+}
+.main__text {
+	margin-top: 80px;
+	margin-bottom: 42px;
+}
+.main__text h3 {
+	text-transform: uppercase;
+}
+.main__text h2 {
+	margin-top: 16px;
+}
+.main__text p {
+	margin-top: 32px;
+	padding: 0 270px;
+}
+footer {
+	background-image: url(./images/footer-desktop.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	padding: 110px 0;
+	position: relative;
+	z-index: 1;
+	/* background-color: var(--blueoverlay);
+	background-blend-mode: soft-light; */
+}
+.overlay {
+    position: absolute;
+    z-index: 2;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: var(--blueoverlay);
+  }
+.footer__container {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.footer__container h2 {
+	color: var(--pearl);
+	font-weight: var(--black-weight);
+	z-index: 2;
+}
+.footer__container p {
+	color: var(--pearl);
+	width: 31%;
+	z-index: 2;
+}
+.line,
+.line-2 {
+  height: 84px;
+  width: 1px;
+  margin: 0 auto;
+  background: var(--linecolor);
+}
+.no1,
+.no2 {
+	text-align: center;
+	font-weight: var(--bold-weight);
+	border: 1px solid var(--linecolor);
+	display: inline-block;
+	border-radius: 50%;
+	height: 56px;
+	width: 56px;
+	line-height: 56px;
+	background-color: var(--pearl);
+	color: var(--grayish-blue);
+}
+.no2 {
+  position: relative;
+  top: 30px;
+  z-index: 2;
+}
+.line-2 {
+	transform: translateY(30px);
+}
+
+@media screen and (max-width: 375px) {
+	header {
+		margin-top: 40px;
+		margin-bottom: 64px;
+	}
+	.header__details h1 {
+		font-size: 40px;
+		line-height: 44px;
+		margin-bottom: 24px;
+	}
+	.header__details p {
+		font-size: 16px;
+		line-height: 26px;
+		padding: 0 24px;
+	}
+	.header__btns {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	.btn-download {
+		margin-right: 0;
+		margin-bottom: 16px;
+	}
+	.main__text {
+		margin-top: 64px;
+		margin-bottom: 42px;
+	}
+	.main__text p {
+		padding: 0 20px;
+		font-size: 16px;
+	}
+	.main__text h2 {
+		margin-top: 24px;
+		font-size: 32px;
+		line-height: 36px;
+	}
+	footer {
+		padding: 92px 0 72px;
+	}
+	.footer__container {
+		flex-direction: column;
+		text-align: center;
+	}
+	.footer__container h2 {
+		margin-bottom: 24px;
+		font-size: 32px;
+		line-height: 36px;
+	}
+	.footer__container p {
+		width: auto;
+		margin-left: auto;
+		margin-right: auto;
+		padding: 0 10px;
+		margin-bottom: 32px;
+	}
+	.header__grid {
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: repeat(2, auto);
+		margin-top: 44px;
+	}
+	.header__content {
+		grid-column: 1/3;
+		grid-row: 2/3;
+		margin-top: 48px;
+	}
+	.header__images-left div:nth-child(odd) {
+		position: relative;
+		top: 35px;
+	}
+	.header__images-right div:nth-child(even) {
+		position: relative;
+		top: 35px;
+	}
+	.header__images-left img,
+	.header__images-right img {
+		max-width: 55px;
+	}
+	.header__images-left {
+		margin-left: -25px;
+	}
+	.header__images-right {
+		margin-right: -25px;
+	}
+	
+}
+@media screen and (min-width: 376px) and (max-width: 530px) {
+	.header__images-left img,
+	.header__images-right img {
+		max-width: 75px;
+	}
+	.header__images-left {
+		margin-left: -35px;
+	}
+	.header__images-right {
+		margin-right: -35px;
+	}
+}
+@media screen and (min-width: 376px) and (max-width: 768px) {
+	header {
+		margin-top: 40px;
+		margin-bottom: 80px;
+	}
+	.header__details h1 {
+		font-size: 48px;
+		line-height: 48px;
+		margin-bottom: 24px;
+	}
+	.header__details p {
+		padding: 0 150px;
+	}
+	.main__images {
+		margin-top: 67px;
+	}
+	.main__text {
+		margin-top: 48px;
+		margin-bottom: 52px;
+	}
+	.main__text p {
+		font-size: 16px;
+		padding: 0 70px;
+	}
+	footer {
+		padding: 92px 0 66px;
+	}
+	.footer__container {
+		flex-direction: column;
+		text-align: center;
+	}
+	.footer__container h2 {
+		margin-bottom: 32px;
+		font-size: 40px;
+		line-height: 44px;
+	}
+	.footer__container p {
+		width: auto;
+		margin-left: auto;
+		margin-right: auto;
+		padding: 0 80px;
+		margin-bottom: 40px;
+	}
+	.header__grid {
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: repeat(2, auto);
+		margin-top: 64px;
+	}
+	.header__content {
+		grid-column: 1/3;
+		grid-row: 2/3;
+		margin-top: 72px;
+	}
+	.header__images-left div:nth-child(odd) {
+		position: relative;
+		top: 35px;
+	}
+	.header__images-right div:nth-child(even) {
+		position: relative;
+		top: 35px;
+	}
+}
+@media screen and (min-width: 376px) and (max-width: 650px) {
+	.header__details p,
+	.footer__container p,
+	.main__text p {
+		padding: 0 25px;
+	}
+}
